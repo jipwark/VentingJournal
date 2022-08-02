@@ -17,6 +17,10 @@
 		BDD3B209289888B80052B14E /* VentingJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD3B208289888B80052B14E /* VentingJournalTests.swift */; };
 		BDD3B213289888B80052B14E /* VentingJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD3B212289888B80052B14E /* VentingJournalUITests.swift */; };
 		BDD3B215289888B80052B14E /* VentingJournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD3B214289888B80052B14E /* VentingJournalUITestsLaunchTests.swift */; };
+		BDD3B22428988B1B0052B14E /* VentingJournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD3B22328988B1B0052B14E /* VentingJournalTableViewController.swift */; };
+		BDD3B22628988B2A0052B14E /* VentingJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD3B22528988B2A0052B14E /* VentingJournal.swift */; };
+		BDE07B622899E19A00C7C6C6 /* AddVentJournalViewController)ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE07B612899E19A00C7C6C6 /* AddVentJournalViewController)ViewController.swift */; };
+		BDE07B642899E70A00C7C6C6 /* CompleteVentJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE07B632899E70A00C7C6C6 /* CompleteVentJournalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		BDD3B20E289888B80052B14E /* VentingJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VentingJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD3B212289888B80052B14E /* VentingJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentingJournalUITests.swift; sourceTree = "<group>"; };
 		BDD3B214289888B80052B14E /* VentingJournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentingJournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDD3B22328988B1B0052B14E /* VentingJournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentingJournalTableViewController.swift; sourceTree = "<group>"; };
+		BDD3B22528988B2A0052B14E /* VentingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentingJournal.swift; sourceTree = "<group>"; };
+		BDE07B612899E19A00C7C6C6 /* AddVentJournalViewController)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddVentJournalViewController)ViewController.swift"; sourceTree = "<group>"; };
+		BDE07B632899E70A00C7C6C6 /* CompleteVentJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteVentJournalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		BDD3B1E2289888B70052B14E = {
 			isa = PBXGroup;
 			children = (
+				BDE07B632899E70A00C7C6C6 /* CompleteVentJournalViewController.swift */,
 				BDD3B1ED289888B70052B14E /* VentingJournal */,
 				BDD3B207289888B80052B14E /* VentingJournalTests */,
 				BDD3B211289888B80052B14E /* VentingJournalUITests */,
@@ -105,6 +114,9 @@
 				BDD3B1F0289888B70052B14E /* SceneDelegate.swift */,
 				BDD3B1F2289888B70052B14E /* ViewController.swift */,
 				BDD3B1F4289888B70052B14E /* Main.storyboard */,
+				BDE07B612899E19A00C7C6C6 /* AddVentJournalViewController)ViewController.swift */,
+				BDD3B22328988B1B0052B14E /* VentingJournalTableViewController.swift */,
+				BDD3B22528988B2A0052B14E /* VentingJournal.swift */,
 				BDD3B1FA289888B80052B14E /* Assets.xcassets */,
 				BDD3B1FC289888B80052B14E /* LaunchScreen.storyboard */,
 				BDD3B1FF289888B80052B14E /* Info.plist */,
@@ -263,8 +275,12 @@
 			files = (
 				BDD3B1F3289888B70052B14E /* ViewController.swift in Sources */,
 				BDD3B1F9289888B70052B14E /* VentingJournal.xcdatamodeld in Sources */,
+				BDE07B642899E70A00C7C6C6 /* CompleteVentJournalViewController.swift in Sources */,
 				BDD3B1EF289888B70052B14E /* AppDelegate.swift in Sources */,
+				BDE07B622899E19A00C7C6C6 /* AddVentJournalViewController)ViewController.swift in Sources */,
+				BDD3B22628988B2A0052B14E /* VentingJournal.swift in Sources */,
 				BDD3B1F1289888B70052B14E /* SceneDelegate.swift in Sources */,
+				BDD3B22428988B1B0052B14E /* VentingJournalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
