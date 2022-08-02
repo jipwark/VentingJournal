@@ -109,7 +109,7 @@ class VentingJournalTableViewController: UITableViewController {
           }
         if let completeVC = segue.destination as? CompleteVentJournalViewController {
             if let vent = sender as? VentingJournal {
-              completeVC.selectedVentingJournal = vent
+              completeVC.selectedToDo = vent
               completeVC.previousVC = self
             }
     }

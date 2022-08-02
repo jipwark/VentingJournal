@@ -15,6 +15,7 @@ class CompleteVentJournalViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = selectedToDo.ventName
 
         // Do any additional setup after loading the view.
     }
