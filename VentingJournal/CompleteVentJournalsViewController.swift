@@ -29,6 +29,7 @@ class CompleteVentJournalsViewController: UIViewController {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let theVentingJournal = selectedVent {
               context.delete(theVentingJournal)
+            try? context.save()
               navigationController?.popViewController(animated: true)
             }
           }
