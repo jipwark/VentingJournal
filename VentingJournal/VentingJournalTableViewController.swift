@@ -13,6 +13,7 @@ class VentingJournalTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,7 +51,6 @@ class VentingJournalTableViewController: UITableViewController {
         let ventJournal = ventingJournals[indexPath.row]
         
         cell.textLabel?.text = ventJournal.ventName
-        
 
         // Configure the cell...
 
@@ -63,6 +63,8 @@ class VentingJournalTableViewController: UITableViewController {
 
       performSegue(withIdentifier: "moveToComplete", sender: vent)
     }
+    
+    
     
 
     /*
@@ -108,7 +110,7 @@ class VentingJournalTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddVentJournalViewController_ViewController {
             addVC.previousVC = self
           }
-        if let completeVC = segue.destination as? CompleteVentJournalViewController {
+        if let completeVC = segue.destination as? CompleteVentJournalsViewController {
             if let vent = sender as? VentingJournalCD {
               completeVC.selectedVent = vent
               completeVC.previousVC = self
