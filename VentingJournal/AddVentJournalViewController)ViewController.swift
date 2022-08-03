@@ -36,23 +36,25 @@ class AddVentJournalViewController_ViewController: UIViewController {
 
   
     @IBAction func addVent(_ sender: Any) {
-        let vent = VentingJournal()
-        if let titleText = textField.text , let titleView = textView.text{
 
-        vent.ventName = titleText
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
-        vent.ventText = titleView
-            
-        var ventJournalsDict : [String : String] = [:]
-        ventJournalsDict[titleText] = titleView
+            // we are creating a new ToDoCD object here, naming it toDo
+            let vent = VentingJournalCD(entity: VentingJournalCD.entity(), insertInto: context)
+            if let titleText = textField.text , let titleView = textView.text{
+
+                vent.ventName = titleText
+
+                vent.ventText = titleView
         
 
-        }
-        previousVC.ventingJournals.append(vent)
-
-        previousVC.tableView.reloadData()
+            }
+        
+        try? context.save()
         
         navigationController?.popViewController(animated: true)
+        }
     }
     
 

@@ -8,11 +8,11 @@
 import UIKit
 
 class VentingJournalTableViewController: UITableViewController {
-    var ventingJournals : [VentingJournal] = []
+    var ventingJournals : [VentingJournalCD] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ventingJournals = createVents()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,20 +20,21 @@ class VentingJournalTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    func createVents() -> [VentingJournal] {
+    
+    func getVentingJournals() {
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
-      let swift = VentingJournal()
-      swift.ventName = "Title"
-      swift.ventText = "Vent text...."
-
-      let dog = VentingJournal()
-      dog.ventName = "Walk the Dog"
-      swift.ventText = "Vent text...."
-     
-
-      return [swift, dog]
+        if let coreDataVentingJournals = try? context.fetch(VentingJournalCD.fetchRequest()) as? [VentingJournalCD] {
+                ventingJournals = coreDataVentingJournals
+                tableView.reloadData()
+        }
+      }
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+      getVentingJournals()
+    }
+    
     // MARK: - Table view data source
 
 
@@ -108,8 +109,8 @@ class VentingJournalTableViewController: UITableViewController {
             addVC.previousVC = self
           }
         if let completeVC = segue.destination as? CompleteVentJournalViewController {
-            if let vent = sender as? VentingJournal {
-              completeVC.selectedToDo = vent
+            if let vent = sender as? VentingJournalCD {
+              completeVC.selectedVent = vent
               completeVC.previousVC = self
             }
     }
